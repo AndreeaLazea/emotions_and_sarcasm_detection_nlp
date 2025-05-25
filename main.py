@@ -29,8 +29,8 @@ def main():
     emotion_df = loader.load_emotion_data()
     emotion_df = loader.preprocess_dataframe(emotion_df, text_column="text")
 
-    # Pick ONE emotion column to classify (multi-class example)
-    emotion_target = "joy"  # <-- you can change this to 'anger', 'sadness', etc.
+    # Picking one emotion column to classify (multi-class example)
+    emotion_target = "joy"
     emotion_df = emotion_df[["text", emotion_target]].dropna()
     emotion_df[emotion_target] = emotion_df[emotion_target].astype(int)
 
